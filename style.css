@@ -10,31 +10,52 @@ body {
     text-align: center;
     font-family: 'font1';
     color: white;
-    font-size: 250px;
+    font-size: 200px;
     margin-bottom: 50px;
     margin-top: 150px;
     background-color: rgba(0, 0, 0, 0.63);
 }
+ 
 
-.info-text {
-
+.info-text{
 
     background-color: rgba(0, 0, 0, 0.3);
     width: 700px;
-    font-size: 25px;
-    color: white;
-    top: 0px;
-    text-align: center;
-    font-family: 'font2';
     position: relative;
-    
     left: 50%;
     transform: translate(-50%);
-
- 
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    /* padding-bottom: 15px; */
+    border-bottom: 5px solid rgba(0, 0, 0, 0.8);
 
 
 }
+div.info-text > p{
+    font-size: 25px;
+    color: white;
+    margin: 0;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'font2';
+}
+
+div.info-text > h1{
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding-bottom: 10px;
+    font-family: 'font5';
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: right;
+    height: 100%;
+    right: 50px;
+    
+
+}
+
+
 
 @font-face {
     font-family: 'font1';
@@ -53,6 +74,62 @@ body {
     src: url('font3.otf') format('truetype');
 }
 
+@font-face {
+    font-family: 'font4';
+    src: url('font4.otf') format('truetype');
+}
+@font-face {
+    font-family: 'font5';
+    src: url('font5.otf') format('truetype');
+}
+.bot2 {
+    position: relative;
+    float: left;
+    border: none;
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    color: rgb(255, 255, 255);
+    font-family: 'font1';
+    font-size: 20px;
+
+}
+
+.bot2:hover {
+    animation: bot2-color 800ms;
+    animation-fill-mode: forwards;
+}
+.bot2:not(:hover) {
+    animation: bot2-color2 600ms;
+}
+
+@keyframes bot2-color {
+    from {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: rgb(255, 255, 255);
+    }
+
+    to {
+        background-color: rgb(255, 255, 255);
+        color:black;
+    }
+
+}
+@keyframes bot2-color2 {
+    from {
+        background-color: rgb(255, 255, 255);
+        color:black;
+    }
+
+    to {
+        
+        background-color: rgba(0, 0, 0, 0.5);
+        color: rgb(255, 255, 255);
+    }
+
+}
+
 .bot {
     position: relative;
     left: 50%;
@@ -66,15 +143,46 @@ body {
     color: rgb(255, 21, 60);
     font-family: 'font1';
     font-size: 20px;
+
+}
+
+@keyframes color {
+    from {
+        background-color: white;
+        color: rgb(255, 21, 60);
+        border-radius: 40px;
+    }
+
+    to {
+        background-color: rgb(255, 21, 60);
+        color: white;
+        border-radius: 12px;
+    }
+
+}
+
+@keyframes color2 {
+    from {
+        background-color: rgb(255, 21, 60);
+        color: white;
+        border-radius: 12px;
+    }
+
+    to {
+        background-color: white;
+        color: rgb(255, 21, 60);
+        border-radius: 40px;
+    }
 }
 
 .bot:hover {
+    animation: color 600ms;
+    animation-fill-mode: forwards;
+}
 
-    color: white;
-    background-color: rgb(255, 21, 60);
-    border-radius: 12px;
-    animation-fill-mode: both;
-    animation: 5px both ;
+.bot:not(:hover) {
+    animation: color2 600ms;
+
 }
 
 .menu {
@@ -87,7 +195,7 @@ body {
     box-shadow: 0px 5px 20px;
     top: 0;
     z-index: 1;
-    
+
 
 
 }
@@ -101,20 +209,20 @@ li {
     font-family: 'font3';
     font-size: 25px;
     cursor: default;
-    
+
 }
 
 li:hover {
 
     border-bottom: 4px solid rgb(255, 21, 60);
-    padding-bottom: 3px;
-    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-top: 3px;
     color: rgb(255, 21, 60);
-
-
+    animation: text-color 500ms;
 }
-.top{
-    background-color:  rgba(26, 26, 26, 0.9);
+
+.top {
+    background-color: rgba(26, 26, 26, 0.9);
     display: inline-box;
     width: 100%;
     height: 100px;
@@ -122,25 +230,177 @@ li:hover {
     top: 0;
     margin: 0;
     z-index: 1;
-   
+
 
 
 }
+
 .bottom {
-    background-color: rgba(0, 0, 0, 0.781);
-    display: inline-box;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.651), rgba(0, 0, 0, 0.9));
+    box-shadow: 0px -5px 20px;
     width: 100%;
-    height: 300px;
-    
+    height: 46px;
+    margin-top: 25px;
+    border-top: 2px rgb(0, 0, 0) solid;
+}
+
+.tel,
+.ap,
+.git,
+.dis {
+    color: white;
+    font-family: font2;
     margin: 0;
+    float: left;
+    padding: 1px 16px 1px 16px;
+    font-family: 'font4';
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.r-b {
+    color: white;
+    font-family: font2;
+    margin: 0;
+    float: right;
+    padding: 1px 16px 1px 16px;
+    font-family: 'font4';
+    font-size: 25px;
+    cursor: default;
+    margin-top: 2px;
+    margin-bottom: 2px;
 
 }
-.footer{
+
+.tel:hover {
+    animation: tel-color 800ms;
+    animation-fill-mode: forwards;
+}
+
+.tel:not(:hover) {
+    animation: tel-color2 600ms;
+
+}
+
+@keyframes tel-color {
+    from {}
+
+    to {
+        background-color: rgb(21, 103, 255);
+        border-radius: 20px;
+    }
+
+}
+
+@keyframes tel-color2 {
+    from {
+        background-color: rgb(21, 103, 255);
+        border-radius: 20px;
+    }
+
+    to {}
+}
+
+
+.ap:hover {
+    animation: ap-color 800ms;
+    animation-fill-mode: forwards;
+}
+
+.ap:not(:hover) {
+    animation: ap-color2 600ms;
+
+}
+
+@keyframes ap-color {
+    from {}
+
+    to {
+        background-color: rgb(255, 14, 74);
+        border-radius: 20px;
+    }
+
+}
+
+@keyframes ap-color2 {
+    from {
+        background-color: rgb(255, 14, 74);
+        border-radius: 20px;
+    }
+
+    to {}
+}
+
+.dis:hover {
+    animation: dis-color 800ms;
+    animation-fill-mode: forwards;
+}
+
+.dis:not(:hover) {
+    animation: dis-color2 600ms;
+
+}
+
+@keyframes dis-color {
+    from {}
+
+    to {
+        background-color: rgb(0, 174, 255);
+        border-radius: 20px;
+    }
+
+}
+
+@keyframes dis-color2 {
+    from {
+        background-color: rgb(0, 174, 255);
+        border-radius: 20px;
+    }
+
+    to {}
+}
+
+
+.git:hover {
+    animation: git-color 800ms;
+    animation-fill-mode: forwards;
+}
+
+.git:not(:hover) {
+    animation: git-color2 600ms;
+
+}
+
+@keyframes git-color {
+    from {}
+
+    to {
+        background-color: rgb(117, 0, 172);
+        border-radius: 20px;
+    }
+
+}
+
+@keyframes git-color2 {
+    from {
+        background-color: rgb(0, 0, 0);
+        border-radius: 20px;
+    }
+
+    to {}
+}
+
+
+
+.footer {
     color: white;
     float: left;
     font-family: font3;
 }
-.search{
+
+.search {
     display: block;
     border: none;
     border-radius: 2px;
@@ -155,6 +415,4 @@ li:hover {
     margin: 0;
     padding: 0;
     outline: none;
-    
-
 }
