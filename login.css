@@ -1,0 +1,280 @@
+@font-face {
+    font-family: 'font1';
+    src: url('font1.ttf') format('truetype');
+
+
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('font2.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font3';
+    src: url('font3.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font4';
+    src: url('font4.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font5';
+    src: url('font5.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'font6';
+    src: url('font6.ttf') format('truetype');
+}
+
+
+body {
+    overflow: hidden;
+    background-color: black;
+    margin: 0;
+    
+}
+
+
+@keyframes back {
+    from {
+        background-position: 0 0%;
+    }
+
+    to {
+        background-position: 100% 0%;
+    }
+}
+
+.back {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    gap: 5px;
+    justify-content: center;
+    background-size: 280%;
+    background-image: linear-gradient(to right, rgb(0, 0, 0) 40%, rgb(255, 21, 60), rgb(0, 0, 0) 60%);
+    animation: back 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    will-change: background-position;
+    position: relative;
+    bottom: 20px;
+    height: 100%;
+}
+
+
+.back>div {
+    background-color: rgb(18, 18, 18);
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+    will-change: background-color;
+}
+
+
+
+
+div>div:hover {
+    animation: color 500ms;
+    animation-fill-mode: forwards;
+
+}
+
+.back>div:not(:hover) {
+    animation: color2 500ms;
+
+}
+
+@keyframes color {
+    from {
+        background-color: rgb(24, 24, 24);
+    }
+
+    to {
+        background-color: rgb(255, 21, 60);
+    }
+
+}
+
+@keyframes color2 {
+    from {
+        background-color: rgb(255, 21, 60);
+
+    }
+
+    to {
+        background-color: rgb(24, 24, 24);
+        
+
+    }
+}
+
+.login-box{
+    width: 450px;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    /* box-shadow: 10px 10px 50px;
+    box-shadow: -10px -10px 50px; */
+    /* border: 10px solid; */
+    /* border-image: linear-gradient(to right, indigo, violet) 1; */
+
+    
+    
+}
+
+.box::before {
+    content: "";
+    /* z-index: -1; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-60deg, rgb(255, 21, 60) 13%, #0400ff 100% );
+    scale: 1.01;
+    filter: blur(20px);
+    border-radius: inherit;
+    animation: shadow 1s infinite;
+    animation-direction: alternate-reverse;
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.box::after {
+    content: "";
+    /* z-index: -1; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+
+@keyframes shadow {
+    from{scale: 1.005;}
+    to{scale: 1.05;}
+}
+.log{
+    
+    z-index: 1;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: font2;
+    font-size: 15px;
+    background-color: #ffffff18;
+    font-size: auto;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-align: center;
+    transition: 200ms;
+    color: #888888;
+    
+}
+.title{
+    color: rgb(255, 21, 60);
+    font-family: font1;
+    font-size: 80px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 80px;
+    transform: translate(-50%);
+    margin: 0;
+    width: 450px;
+    text-align: center;
+}
+.p1{
+    top: 180px;
+}
+.p2{
+    top:240px
+}
+.log:hover{
+    background-color: white;
+}
+.log:focus{
+    background-color: rgb(255, 255, 255);
+}
+
+
+.bot {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 325px;
+    transform: translate(-50%);
+    border: none;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+    background-color: rgb(255, 21, 60);
+    color: rgb(20, 20, 20);
+    font-family: 'font1';
+    font-size: 20px;
+    transition: 400ms;
+    cursor: pointer;
+
+}
+.text1{
+    z-index: 1;
+    color: #ffffff9c;
+    position: absolute;
+    right: 90px;
+    top: 299px;
+    font-family: font2;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 200ms;
+    text-underline-offset: none;
+    text-decoration: none;
+}
+.text2{
+    z-index: 1;
+    color: #ffffff9c;
+    position: absolute;
+    left: 90px;
+    top: 299px;
+    font-family: font2;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 200ms;
+    text-decoration: none;
+}
+
+.text2:hover{
+    color: rgb(255, 21, 60);
+}
+.text1:hover{
+    color: rgb(255, 21, 60);
+}
+.bot:hover{
+    border-radius: 20px;
+}
+
+::placeholder{
+    color: #888888;
+}
+
+
+        
+
+
