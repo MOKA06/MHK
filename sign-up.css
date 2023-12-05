@@ -29,6 +29,11 @@
     font-family: 'font6';
     src: url('font6.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'font7';
+    src: url('font7.otf') format('truetype');
+}
+
 
 
 body {
@@ -247,8 +252,8 @@ div>div:hover {
     height: 40px;
     background-color: rgb(255, 21, 60);
     color: rgb(20, 20, 20);
-    font-family: 'font1';
-    font-size: 20px;
+    font-family: 'font7';
+    font-size: 25px;
     transition: 400ms;
     cursor: pointer;
 
